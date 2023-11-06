@@ -1,16 +1,16 @@
-﻿string Greeting= " Hello ";
-string Name;
-Console.WriteLine("Whats is Your Name ?");
-Name = Console.ReadLine();
-Console.WriteLine(Greeting +" "+ Name);
-Console.WriteLine("Do you Want To Play Some Games? \nEnter 0 for NO and 1 for YES ? ");
-ConsoleKeyInfo keyInfo = Console.ReadKey();
+﻿using System;
 
-if (keyInfo.KeyChar == '0')
+class Q1
 {
-    Console.WriteLine("\nGo Away, Stupid!!");
-}
-else if (keyInfo.KeyChar == '1')
-{
-    Console.WriteLine("\nWelcome to this game");
+    static void Main()
+    {
+        const int secInMin = 60;
+        const int minInHour = 60;
+        const int hourInDay = 24;
+        int daysInYear = 365;
+        long secInYear = secInMin * minInHour * hourInDay * daysInYear;
+        int minInYear = minInHour * hourInDay * daysInYear;
+        Console.WriteLine(secInYear + "\n" + minInYear);
+        Console.Write(secInYear / minInHour);
+    }
 }
